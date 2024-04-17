@@ -5,7 +5,8 @@ export const Header = styled.header`
   background-color: black;
   padding: 20px;
   display: flex;
-  padding-left: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
   flex-direction: row;
   font-size: calc(10px + 3vmin);
   color: white;
@@ -31,7 +32,6 @@ export const SearchComponent = styled.div`
   flex-direction: row;
   align-items: center;
   padding: 8px;
-  margin-right: 40px;
   background-color: white;
   border-radius: 32px;
 `
@@ -46,6 +46,9 @@ export const SearchInput = styled.input`
   font-size: 20px;
   color: black;
   background-color: white;
+  &:focus {
+    outline: none;
+  }
 `
 export const SearchIcon = styled.img`
   display: flex;
