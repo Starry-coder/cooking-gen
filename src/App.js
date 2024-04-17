@@ -1,65 +1,85 @@
-import './App.css';
 import styled from 'styled-components';
-
+import './App.css';
+import {Header,AppName,Logo,SearchComponent,SearchIcon,SearchInput} from './components/HeaderComponent';
 const Container = styled.div`
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 `
 
-const Header = styled.header`
-  justify-content: space-between;
-  background-color: black;
+const RecipeListContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+`
+const RecipieContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   padding: 20px;
-  display: flex;
-  padding-left: 40px;
-  flex-direction: row;
-  font-size: calc(10px + 3vmin);
-  color: white;
+  box-shadow: 0 3px 10px 0 #aaa;
+  text-align: center;
+  width: 450px;
+  margin: 30px;
+`
+const RecipeImage = styled.img`
+  height: 300px;
+`
+const RecipeName = styled.span`
+
+  font-size: 24px;
   font-weight: bold;
-  box-shadow: 0 3px 3px 0 #555
-`;
-const Logo = styled.img`
-  margin: 15px;
-  height: 40px;
-  width: 40px;
+  margin: 10px;
 `
-const AppName = styled.div`
+const RecipeButtons = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
+`
+const RecipeIngredients = styled.button`
+  flex-direction: column;
   align-items: center;
-`
-const SearchComponent = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 8px;
-  margin-right: 40px;
-  background-color: white;
-  border-radius: 32px;
-`
-const SearchInput = styled.input`
-  display: flex;
-  flex-direction: row;
   width: 200px;
-  height: 30px;
-  border: none;
-  padding: 8px;
-  padding-left: 4px;
-  font-size: 20px;
-  color: black;
-  background-color: white;
-`
-const SearchIcon = styled.img`
   display: flex;
-  flex-direction: row;
-  width:  30px;
-  height: 30px;
-  margin: 12px;
+  font-size: 20px;
+  border:0.5px solid green;
+  border-radius: 8px;
+  background-color: white;
+  color:green;
+  padding: 8px;
+  margin: 8px;
+  box-shadow: 0 3px 3px 0.5px green;
+  &:hover {
+    background-color: green;
+    box-shadow:none;
+    color: white;
+    transition: 0.4s;
+  }
+`
+const FullRecipe = styled.button`
+flex-direction: column;
+align-items: center;
+width: 200px;
+display: flex;
+font-size: 20px;
+border: 0.5px solid orange;
+border-radius: 8px;
+color:Orange  ;
+background-color: white;
+padding: 8px;
+margin:8px;
+box-shadow: 0 3px 3px 0.5px orange;
+&:hover {
+  background-color: orange;
+  box-shadow:none;
+  color: white;
+  transition: 0.4s;
+}
 `
 
 function App() {
   return (
-    <div className="App">
+    <Container className="App">
       <Header>
         <AppName>
           <Logo src='/food-icon.svg' alt='logo'/>
@@ -70,7 +90,64 @@ function App() {
           <SearchInput type='text' placeholder='Search recipes'/>
         </SearchComponent>
       </Header>
-    </div>
+      <RecipeListContainer>
+
+        <RecipieContainer>
+          <RecipeImage src='/food-icon.svg'/>
+          <RecipeName>Dish Name</RecipeName>
+          <RecipeButtons>
+            <RecipeIngredients>Ingredients</RecipeIngredients>
+            <FullRecipe>See Entire Recipe</FullRecipe>
+          </RecipeButtons>
+        </RecipieContainer>
+
+        <RecipieContainer>
+          <RecipeImage src='/food-icon.svg'/>
+          <RecipeName>Dish Name</RecipeName>
+          <RecipeButtons>
+            <RecipeIngredients>Ingredients</RecipeIngredients>
+            <FullRecipe>See Entire Recipe</FullRecipe>
+          </RecipeButtons>
+        </RecipieContainer>
+        
+        <RecipieContainer>
+          <RecipeImage src='/food-icon.svg'/>
+          <RecipeName>Dish Name</RecipeName>
+          <RecipeButtons>
+            <RecipeIngredients>Ingredients</RecipeIngredients>
+            <FullRecipe>See Entire Recipe</FullRecipe>
+          </RecipeButtons>
+        </RecipieContainer>
+        
+        <RecipieContainer>
+          <RecipeImage src='/food-icon.svg'/>
+          <RecipeName>Dish Name</RecipeName>
+          <RecipeButtons>
+            <RecipeIngredients>Ingredients</RecipeIngredients>
+            <FullRecipe>See Entire Recipe</FullRecipe>
+          </RecipeButtons>
+        </RecipieContainer>
+        
+        <RecipieContainer>
+          <RecipeImage src='/food-icon.svg'/>
+          <RecipeName>Dish Name</RecipeName>
+          <RecipeButtons>
+            <RecipeIngredients>Ingredients</RecipeIngredients>
+            <FullRecipe>See Entire Recipe</FullRecipe>
+          </RecipeButtons>
+        </RecipieContainer>
+        
+        <RecipieContainer>
+          <RecipeImage src='/food-icon.svg'/>
+          <RecipeName>Dish Name</RecipeName>
+          <RecipeButtons>
+            <RecipeIngredients>Ingredients</RecipeIngredients>
+            <FullRecipe>See Entire Recipe</FullRecipe>
+          </RecipeButtons>
+        </RecipieContainer>
+        
+      </RecipeListContainer>
+    </Container>
   );
 }
 
