@@ -5,6 +5,7 @@ import {Header,AppName,Logo,SearchComponent,SearchIcon,SearchInput} from './comp
 // eslint-disable-next-line no-unused-vars
 import {RecipeListContainer,RecipieContainer,RecipeImage,RecipeName,RecipeButtons,RecipeIngredients,FullRecipe} from './components/RecipeComponent';
 import React, { useState } from 'react';
+import {Dialog, DialogTitle, DialogContent, DialogActions} from '@material-ui/core';
 
 const APP_ID = '25c722ba';
 const APP_KEY = '7bd115c345de68ebdf8ceaaff6cb5b64';
@@ -14,16 +15,67 @@ const Container = styled.div`
   flex-direction: column;
 `
 const RecipeComponent = (props) => {
+
+  const [show, setShow] = useState(false);
   const {recipeObj} = props;
+
   return (
-    <RecipieContainer>
-      <RecipeImage src={props.recipeObj.recipe.image} alt='recipe'/>
-      <RecipeName>{props.recipeObj.recipe.label}</RecipeName>
-      <RecipeButtons>
-        <RecipeIngredients>Ingredients</RecipeIngredients>
-        <FullRecipe onClick={() => window.open(recipeObj.url)}>Full Recipe</FullRecipe>
-      </RecipeButtons>
-    </RecipieContainer>
+    <>
+      <Dialog open={show}>
+        <DialogTitle id='alert-dialog-slide-title' style={
+          {
+            textAlign: 'center',
+            fontSize: '30px',
+            fontWeight: 'bold',
+          }
+        
+        }>Ingredients</DialogTitle>
+        <DialogContent style={
+          {
+            display: 'flex',
+            flexDirection: 'column',
+            width: '500px',
+            height: '500px',
+            overflowY: 'scroll',
+            textAlign: 'center',
+          }
+        }>
+          <table>
+            <thead>
+              <tr>
+                <th>Ingredients</th>
+                <th>Weight</th>
+              </tr>
+            </thead>
+            <tbody>
+              {props.recipeObj.recipe.ingredients.map((ingredientObj, index) => (
+                <tr key={index}>
+                  <td style={
+                    {
+                      textAlign: 'left',
+                      padding: '8px',
+                    }
+                  }>{ingredientObj.text}</td>
+                  <td>{ingredientObj.weight}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </DialogContent>
+        <DialogActions>
+          <RecipeIngredients onClick={() => window.open(props.recipeObj.recipe.url)}>See More</RecipeIngredients>
+          <FullRecipe onClick={() => setShow(false)}>Close</FullRecipe>
+        </DialogActions>
+      </Dialog>
+      <RecipieContainer>
+        <RecipeImage src={props.recipeObj.recipe.image} alt='recipe' />
+        <RecipeName>{props.recipeObj.recipe.label}</RecipeName>
+        <RecipeButtons>
+          <RecipeIngredients onClick={() => setShow(true)}>Ingredients</RecipeIngredients>
+          <FullRecipe onClick={() => window.open(props.recipeObj.recipe.url)}>Full Recipe</FullRecipe>
+        </RecipeButtons>
+      </RecipieContainer>
+    </>
   )
 }
 
