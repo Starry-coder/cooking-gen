@@ -13,7 +13,7 @@ const Header = styled.header`
   display: flex;
   padding-left: 40px;
   flex-direction: row;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 3vmin);
   color: white;
   font-weight: bold;
   box-shadow: 0 3px 3px 0 #555
@@ -32,19 +32,20 @@ const SearchComponent = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1px;
+  padding: 8px;
   margin-right: 40px;
+  background-color: white;
+  border-radius: 32px;
 `
 const SearchInput = styled.input`
   display: flex;
   flex-direction: row;
   width: 200px;
   height: 30px;
-  border-radius: 10px;
-  border: 1px solid black;
-  padding-left: 10px;
-  font-size: 15px;
-  font-weight: bold;
+  border: none;
+  padding: 8px;
+  padding-left: 4px;
+  font-size: 20px;
   color: black;
   background-color: white;
 `
@@ -53,7 +54,7 @@ const SearchIcon = styled.img`
   flex-direction: row;
   width:  30px;
   height: 30px;
-  margin: 15px;
+  margin: 12px;
 `
 
 function App() {
@@ -65,7 +66,7 @@ function App() {
           CookingGen
         </AppName>
         <SearchComponent>
-          <SearchIcon src='/search-icon.svg' alt='search'/>
+          <SearchIcon src='/search-icon2.svg' alt='search'/>
           <SearchInput type='text' placeholder='Search recipes'/>
         </SearchComponent>
       </Header>
