@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import './App.css';
 import Axios from 'axios';
-import {Header,AppName,Logo,SearchComponent,SearchIcon,SearchInput} from './components/HeaderComponent';
+import {Header,AppName,Logo,SearchComponent,Navigation,SearchIcon,Link,SearchInput} from './components/HeaderComponent';
 // eslint-disable-next-line no-unused-vars
 import {RecipeListContainer,RecipieContainer,RecipeImage,RecipeName,RecipeButtons,RecipeIngredients,FullRecipe} from './components/RecipeComponent';
 import React, { useState } from 'react';
@@ -17,6 +17,7 @@ const Container = styled.div`
 const RecipeComponent = (props) => {
 
   const [show, setShow] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const {recipeObj} = props;
 
   return (
@@ -62,7 +63,14 @@ const RecipeComponent = (props) => {
             </tbody>
           </table>
         </DialogContent>
-        <DialogActions>
+        <DialogActions style={
+          {
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+            padding: '8px',
+          }
+        }>
           <RecipeIngredients onClick={() => window.open(props.recipeObj.recipe.url)}>See More</RecipeIngredients>
           <FullRecipe onClick={() => setShow(false)}>Close</FullRecipe>
         </DialogActions>
@@ -102,10 +110,26 @@ function App() {
           <Logo src='/food-icon.svg' alt='logo'/>
           CookingGen
         </AppName>
+        <div style={
+          {
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+          }
+        
+        }>
+        <Link href = "/" style={
+          {
+            marginRight: '56px',
+          }
+        }>
+          Home
+        </Link>
         <SearchComponent>
           <SearchIcon src='/search-icon2.svg' alt='search'/>
           <SearchInput type='text' placeholder='Search recipes' onChange={onTextChange}/>
         </SearchComponent>
+        </div>
       </Header>
 
       

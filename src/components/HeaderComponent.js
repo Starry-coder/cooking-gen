@@ -57,3 +57,16 @@ export const SearchIcon = styled.img`
   height: 30px;
   margin: 12px;
 `
+export const Navigation = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
+export const Link = styled.a`
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+  &:hover {
+    color: #ffcc00;
+  }
+`
