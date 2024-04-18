@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import './App.css';
 import Axios from 'axios';
-import {Header,AppName,Logo,SearchComponent,Navigation,SearchIcon,Link,SearchInput} from './components/HeaderComponent';
+import {Header,AppName,Logo,SearchComponent,SearchIcon,Link,SearchInput} from './components/HeaderComponent';
 // eslint-disable-next-line no-unused-vars
 import {RecipeListContainer,RecipieContainer,RecipeImage,RecipeName,RecipeButtons,RecipeIngredients,FullRecipe} from './components/RecipeComponent';
 import React, { useState } from 'react';
