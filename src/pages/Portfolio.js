@@ -27,7 +27,10 @@ return (
         <div className="rectangle-5">
             <span className="contact-me">Contact Me</span>
             <span className="contact-details">
-                Phone - +91 9979894244<br />Email - aryan.kumar2022b@vitstudent.ac.in<br />Github - www.github.com/starry-coder<br />Linked In - www.linkedin.com/in/aryan-kumar-b2925a249/
+                Phone - +91 9979894244<br />
+                Email - aryan.kumar2022b@vitstudent.ac.in<br />
+                Github - www.github.com/starry-coder<br />
+                Linked In - www.linkedin.com/in/aryan-kumar-b2925a249/
             </span>
         </div>
         <div className="vector"></div>

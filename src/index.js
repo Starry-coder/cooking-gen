@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Landing from './pages/Landing';
+import Portfolio from './pages/Portfolio';
 
 import {
   createBrowserRouter,
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
     path: "/search",
     element: <App/>,
   },
+  {
+    path: "/about",
+    element: <Portfolio/>,
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
