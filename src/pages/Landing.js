@@ -68,7 +68,11 @@ padding: 40px;
 
 function Landing() {
     return (
-        <Container>
+        <Container style={
+            {
+              backgroundColor: 'white',
+            }
+          }>
             <Header>
                 <AppName>
                     <Logo src='/food-icon.svg' alt='logo'/>

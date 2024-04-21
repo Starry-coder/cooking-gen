@@ -11,6 +11,7 @@ const APP_ID = '25c722ba';
 const APP_KEY = '7bd115c345de68ebdf8ceaaff6cb5b64';
 
 const Container = styled.div`
+  background-color: white;
   display: flex;
   flex-direction: column;
 `
@@ -104,7 +105,11 @@ function App() {
   }
 
   return (
-    <Container className="App">
+    <Container className="App" style={
+      {
+        backgroundColor: 'white',
+      }
+    }>
       <Header>
         <AppName>
           <Logo src='/food-icon.svg' alt='logo'/>
@@ -127,19 +132,28 @@ function App() {
         </Link>
         <SearchComponent>
           <SearchIcon src='/search-icon2.svg' alt='search'/>
-          <SearchInput type='text' placeholder='Search recipes' onChange={onTextChange}/>
+          <SearchInput type='text' placeholder='Search recipes' style={
+            {
+              border: "none"
+            }
+          } onChange={onTextChange}/ >
         </SearchComponent>
         </div>
       </Header>
 
       
 
-      <RecipeListContainer>
+      <RecipeListContainer style={
+      {
+        backgroundColor: 'white',
+      }
+    }>
         {recipeList.length && recipeList.map((recipeObj) =>(
           <RecipeComponent recipeObj = {recipeObj} />
         ))}
       </RecipeListContainer>
     </Container>
+
   );
 }
 
