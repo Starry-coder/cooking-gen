@@ -88,6 +88,7 @@ const RecipeComponent = (props) => {
   )
 }
 
+
 function App() {
   const [timeoutId,updateTimeoutId] = useState();
   const [recipeList,updateRecipeList] = useState([]);
@@ -105,55 +106,47 @@ function App() {
   }
 
   return (
-    <Container className="App" style={
-      {
-        backgroundColor: 'white',
-      }
-    }>
+    <>
+    <Container className="App" style={{
+      backgroundColor: 'white',
+    }}>
       <Header>
         <AppName>
-          <Logo src='/food-icon.svg' alt='logo'/>
+          <Logo src='/food-icon.svg' alt='logo' />
           CookingGen
         </AppName>
-        <div style={
-          {
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-          }
-        
-        }>
-        <Link href = "/" style={
-          {
+        <div style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+        }}>
+          <Link href="/" style={{
             marginRight: '56px',
-          }
-        }>
-          Home
-        </Link>
-        <SearchComponent>
-          <SearchIcon src='/search-icon2.svg' alt='search'/>
-          <SearchInput type='text' placeholder='Search recipes' style={
-            {
+          }}>
+            Home
+          </Link>
+          <SearchComponent>
+            <SearchIcon src='/search-icon2.svg' alt='search' />
+            <SearchInput type='text' placeholder='Search recipes' style={{
               border: "none"
-            }
-          } onChange={onTextChange}/ >
-        </SearchComponent>
+            }} onChange={onTextChange} />
+          </SearchComponent>
         </div>
+
       </Header>
 
-      
 
-      <RecipeListContainer style={
-      {
+
+      <RecipeListContainer style={{
         backgroundColor: 'white',
-      }
-    }>
-        {recipeList.length && recipeList.map((recipeObj) =>(
-          <RecipeComponent recipeObj = {recipeObj} />
+      }}>
+        {recipeList.length && recipeList.map((recipeObj) => (
+          <RecipeComponent recipeObj={recipeObj} />
         ))}
       </RecipeListContainer>
     </Container>
-
+    
+  </>
   );
 }
 
