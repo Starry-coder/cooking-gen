@@ -1,0 +1,22 @@
+.aboutTxt:hover {
+    transform: scale(1.02);
+    border: 2px solid #FFB89A;
+    transition: 0.4s;
+}
+
+.aboutUs:hover {
+    transform: scale(1.02);
+    border: 2px solid #33CC99;
+    transition: 0.4s;
+}
+
+.heroSection:hover {
+    transform: scale(1.02);
+    transition: 0.4s;
+}
+
+.bttn:hover {
+    transform: scale(1.02);
+    transition: 0.4s;
+
+}

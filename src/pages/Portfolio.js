@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './web_portfolio/index.css'; // Import your CSS file
+import './web_portfolio/index.css';
 
 function Header() {
     return (
@@ -23,15 +23,20 @@ function Home() {
             <div className="text-content">
                 <h2 style={
                     {
-                        color: "#92AA02"
+                        color: "#F4CE14"
                     }
                 }>ARYAN KUMAR</h2>
                 <h5 style={
                     {
-                        color: "#B8C376"
+                        color: "#B0C5A4",
+                        
                     }
                 }>WEBSITE DESIGNER</h5>
-                <p>Transforming visions into stunning digital realities, our team of website designers blend creativity with functionality to craft immersive online experiences that captivate, <br />engage, and inspire</p>
+                <p style={
+                    {
+                        color: "black",
+                    }
+                }>Transforming visions into stunning digital realities, our team of website designers blend creativity with functionality to craft immersive online experiences that captivate, <br />engage, and inspire</p>
                 <div className="social-media">
                     <a href="https://www.instagram.com/aaaryankumar._/"><i className='bx bxl-instagram'></i></a>
                     <a href="https://www.linkedin.com/in/aryan-kumar-b2925a249/"><i className='bx bxl-linkedin'></i></a>
@@ -52,7 +57,7 @@ function Skills() {
         <section className="Skills" id="Skills">
             <h3 className="title" style={
                 {
-                    color: "#92AA02"
+                    color: "#45474B"
                 }
             }><i className='bx bx-user'></i>SKILLS</h3>
             <div className="skill-container">
@@ -84,7 +89,7 @@ function Education() {
         <section className="education" id="education">
             <h3 className="title" style={
                 {
-                    color: "#92AA02"
+                    color: "#45474B"
                 }
             }><i className='bx bx-book-open'></i>EDUCATION</h3>
             <div className="row">
@@ -117,7 +122,7 @@ function Contact() {
         <section className="contact" id="contact">
             <h2 className="title" style={
                 {
-                    color: "#92AA02"
+                    color: "#45474B"
                 }
             }><i className='bx bx-headphone'></i>CONTACT ME</h2><br /><br /><br /><br />
             <form action="#" id="">

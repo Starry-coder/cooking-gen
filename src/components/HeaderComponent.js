@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Header = styled.header`
   justify-content: space-between;
   background-color: black;
-  padding: 20px;
+  padding: 0px;
   display: flex;
   padding-left: 100px;
   padding-right: 100px;
@@ -68,5 +68,7 @@ export const Link = styled.a`
   margin: 20px;
   &:hover {
     color: #ffcc00;
+    text-decoration: underline;
+    transition: 0.3s;
   }
 `
