@@ -30,7 +30,6 @@ const RecipeComponent = (props) => {
             fontSize: '30px',
             fontWeight: 'bold',
           }
-        
         }>Ingredients</DialogTitle>
         <DialogContent style={
           {
