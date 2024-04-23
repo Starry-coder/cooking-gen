@@ -115,7 +115,7 @@ function Landing() {
                 </AppName>
                 <Navigation>
                     <Link href='search'>Search</Link>
-                    <Link href='#'>About</Link>
+                    <Link href='#aboutUs'>About</Link>
                     <Link href='about'>Portfolio</Link>
                 </Navigation>
             </Header>
@@ -123,7 +123,7 @@ function Landing() {
             <HeroSecrion className='heroSection'>
                 <HeroContentArea>
                     <HeroHeader>
-                         Welcome to CookingGen
+                        Welcome to CookingGen
                     </HeroHeader>
                     <HeroText>CookingGen is your personal culinary assistant. This innovative application generates recipes based on your preferences and available ingredients. Whether you're a seasoned chef or a beginner in the kitchen, CookingGen makes meal planning easy and fun. Explore a vast array of dishes, save your favorites to your portfolio, and discover new flavors with CookingGen. Start your culinary adventure today by clicking 'Search Recipes'.</HeroText>
                     <Linkk href='search' className='bttn'>Search Recipes</Linkk>
@@ -132,7 +132,7 @@ function Landing() {
                 <HeroImg src='/landing-pic.jpg' alt='food-icon' />
             </HeroSecrion>
 
-            <AboutSection className='aboutUs'>
+            <AboutSection className='aboutUs' id='aboutUs'>
                 <AboutHeader >About Us</AboutHeader>
                 <AboutText className='aboutTxt'>Our website provides you with the best recipes for your favorite dishes. You can search for any recipe you want and get the ingredients and the recipe for it. You can also view the full recipe by clicking on the full recipe button. We hope you enjoy our website and find it helpful.</AboutText>
                 <AboutText className='aboutTxt'>This project is a dynamic web application built using React.js, a popular JavaScript library for building user interfaces. The application is primarily focused on providing recipes to users.</AboutText>
